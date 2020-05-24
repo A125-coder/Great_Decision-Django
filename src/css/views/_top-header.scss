@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.black{
+    background-color: $p-2;
+    height: 5px;
+}
+.container-fluid{
+    background-color: $p-1;
+    .logo{
+        position: relative;
+        padding:10px 0 50px 0 ;
+        img{
+            position: absolute;
+            top: 3px;
+        }
+        h1{
+            position: absolute;
+            left: 70px;
+            top:10px;
+            line-height: 0.95;
+            @include fonts (20px,$font-prox-black,400,$p-2);
+        }     
+    }
+    .contact{  
+        display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;     
+        p{ 
+            color: $p-2; 
+            font-size: 15px;
+            font-family: "Arial";      
+        }
+        img{
+            width: initial;
+        }
+    }
+.user,.logo:hover{
+    cursor: pointer;
+}
+}
+
+  
+  

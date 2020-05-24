@@ -1,0 +1,198 @@
+.mainOne{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        @include fonts (15px,$font-sfui-reg,700,$p-2); 
+        line-height: 27px;
+    }
+    .yellow_circle{
+        display: flex;
+        flex-direction: row;
+    .circle{
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        background-color: $p-1;
+        margin: 45px;
+        position: relative;
+        img{
+            position: absolute;
+            top: 45px;
+            left: 55px;
+        }
+    }
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 75px;
+    h3{
+        margin-bottom: 20px;
+    }
+}
+.button-more{      
+    margin-bottom: 100px;
+}
+
+
+  
+}
+.mainTwo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .photo{
+        position: relative;
+    .border{
+        border: solid 16px $p-1;
+        box-shadow: 0px 2px 5px 0px rgba(2, 3, 3, 0.75);
+        width: 350px;
+        height: 540px;
+    }
+    img{
+        position: absolute;
+        top: 50px;
+        left: -250px;
+        display: inline-block;
+    }
+    }
+    .dropdown{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        h2{
+            text-align:left;
+        }
+        
+    }
+    
+}
+
+.mainThree{
+    margin-top: 200px;
+    text-align: center;
+    h2{
+        margin-bottom: 20px;
+    }
+    p{
+        @include fonts (17px,$font-sfui-reg,700,$p-2); 
+        margin-bottom: 60px;
+    }
+    .advantages{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        p{
+            margin-top: 30px;
+            text-transform: uppercase;
+            @include fonts (20px,$font-prox-sm,900,$p-2); 
+        }
+    }
+}
+.Four{
+    background-color: $p-5;
+    background-size: cover;
+    margin: 100px 0;
+    padding: 50px 0;
+
+.mainFour{
+    text-align: center;
+    h2{
+        margin-bottom: 20px;
+    }
+    p{
+        @include fonts (17px,$font-sfui-reg,700,$p-2);
+    }
+}
+} 
+.house_level{
+    justify-content: center;     
+}
+.house_level img{
+    width: 285px;
+    height: 219px;
+    margin-top: 10px;
+}
+.house_level button{
+    display: block;
+    width: 215px;
+    margin-top: 20px; 
+}
+#standart, #luxory, #premium{
+    display: block;
+    cursor: pointer;
+    margin: 10px;
+    width: 325px;
+    height: 330px;
+    padding: 20px;
+    background-color: $p-3;
+    border-radius: 5%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5)
+}
+.text_div{
+    display: none;
+    width: 90%;
+    p{
+        text-align: center;
+        @include fonts (17px,$font-sfui-reg,500,$p-2);
+        margin-bottom: 50px;
+        line-height: 35px;
+    }
+}
+.text_div:nth-child(2){
+    display: inline-block;
+    margin: 0 auto; 
+}
+#carousel img{
+    cursor: pointer;
+}
+#carousel{
+    position: relative;
+}
+.quote_hr_div{
+    border-bottom: solid 2px $p-2;
+    margin: 50px auto;
+    height: 50px;
+    justify-content: center;
+}
+.qoute_circle{
+    background-color: $p-2;
+    height:42px;
+    border-radius: 50%;
+    margin-top: 26px;
+}
+.qoute_circle p{
+    font-family: $font-prox-sm;
+    color: $p-3;
+    font-size: 55px;
+    line-height: 0px;
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 6.5px;
+}
+#carou_left, #carou_right{
+    height: 100%;
+    cursor: pointer;
+    display: inline-block;
+}
+#carou_right{
+    cursor: pointer;
+}
+#root span{
+    text-transform: uppercase;
+    @include fonts (20px,$font-sfui-reg,700,$p-2);
+}
+h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.mainFive{
+    margin-bottom: 90px;
+}

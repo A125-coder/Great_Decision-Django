@@ -1,0 +1,21 @@
+// @import '../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
+@import '../../node_modules/bootstrap/dist/css/bootstrap-grid.css';
+
+
+@import 'variables';
+@import 'fonts';
+@import 'mixins';
+@import 'settings';
+
+@import 'buttons';
+
+
+
+@import 'views/top-header';
+@import 'views/header';
+@import 'views/header_internal';
+@import 'views/main_home';
+@import 'views/footer';
+
+
+@import 'views/about';

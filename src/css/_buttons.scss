@@ -1,0 +1,41 @@
+.button-more{
+    padding: 10px 25px;
+    @include fonts (18px,$font-prox-sm,600,$p-2);
+    @include button (center,$p-1,$p-1,18px,pointer);
+    margin: 0 auto;
+}
+.button-more:hover{
+    box-shadow: 0px 2px 5px 0px rgba(2, 3, 3, 0.75);
+    @include button (center,$p-4,$p-4,18px,pointer);
+    @include fonts (18px,$font-prox-sm,400,$p-3);
+}
+.button-show{
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 20px;
+    width: 40%;
+    @include fonts (18px,$font-prox-sm,600,$p-3);
+    background-color: $p-2;
+    border-color: $p-2; 
+}
+.button-ahead{
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 20px;
+    width: 40%;
+    @include fonts (18px,$font-prox-sm,600,$p-2);
+    background-color: $p-1;
+    border-color: $p-1; 
+}
+.button-ahead:hover{
+    box-shadow: 0px 2px 5px 0px rgba(2, 3, 3, 0.75);
+    @include button (center,$p-4,$p-4,18px,pointer);
+    @include fonts (18px,$font-prox-sm,500,$p-3);
+}
+.button-show:hover{
+    box-shadow: 0px 2px 5px 0px rgba(2, 3, 3, 0.75);
+    @include button (center,$p-3,$p-2,18px,pointer);
+    @include fonts (18px,$font-prox-sm,500,$p-2);
+}
