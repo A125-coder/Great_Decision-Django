@@ -1,18 +1,22 @@
 // Заголовки
 h1 {
-  @include fonts(40px, $font-prox-black, 700, $p-2);
+  @include fonts(40px, $font-prox-black, 600, $p-2);
   text-transform: uppercase;
+  span{
+    font-size: 40px;
+  }
 }
 
 h2 {
-  @include fonts (35px, $font-prox-black, 900, $p-2);
+  @include fonts (35px, $font-prox-black, 600, $p-2);
   text-transform: uppercase;
 }
 
 h3 {
-  @include fonts (27px, $font-prox-black, 600, $p-2);
+  @include fonts (27px, $font-prox-reg, 600, $font-h3--color-primary);
   text-transform: uppercase;
 }
+
 
 span {
   @include fonts (35px, $font-prox-black, 900, $p-1);
@@ -22,20 +26,22 @@ span {
 .main-text {
   @include fonts (15px, $font-prox-reg, 700, $p-2);
   line-height: 24px;
-  letter-spacing: 1px;
+  margin: 30px 0;
 }
 
 .text-title {
   @include fonts (15px, $font-sfui-reg, 700, $p-2);
   line-height: 24px;
+  text-align: center;
+  margin: 20px 0;
 }
 
 // // Списки
-// .list-check {
-//   list-style-image: url(img/check.png);
-//   @include fonts(15px, $font-prox-reg, $font-text--color-primary, 400);
-//   line-height: 36px;
-// }
+.list-check {
+  list-style-image: url(../img/check.png);
+  @include fonts(15px, $font-prox-sm, 400, $font-text--color-primary);
+  line-height: 36px;
+}
 // // Інпути
 select {
   width: 100%;
@@ -77,7 +83,7 @@ select {
   }
 
   a:hover {
-    @include fonts(18px, $font-sfui-reg, 600, $font-span--color-primary);
+    @include fonts(18px, $font-sfui-reg, 600, $p-4);
   }
 }
 
@@ -88,16 +94,16 @@ select {
   }
 
   a:hover {
-    @include fonts(18px, $font-sfui-reg, 600, $font-span--color-primary);
+    @include fonts(18px, $font-sfui-reg, 600, $p-4);
   }
 }
 
 .link-footer{
     a{
-        @include fonts(14px, $font-prox-reg, 400, $font-text-footer--color-primary_3);
+        @include fonts(14px, $font-prox-reg, 400, $p-3);
         text-decoration: none;
     }
     a:hover{
-        @include fonts(14px, $font-prox-reg, 400, $font-span--color-primary);
+        @include fonts(14px, $font-prox-reg, 400, $p-4);
     }
 }

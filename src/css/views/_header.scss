@@ -7,58 +7,43 @@
 .menu{
     display: flex;
     justify-content: space-between;
-    a{
-        @include fonts (18px,$font-sfui-reg,600,$p-2);
-        display: inline-block;
-        justify-self: stretch;
-        padding-top:15px;
-        text-decoration: none;
-    }
-    a:hover{
-        text-decoration: none;
-        @include fonts (18px,$font-sfui-reg,600,$h-3);
-        cursor: pointer;
-    }
+
 }
 
 .banner1{
     background-color: $p-3;
     overflow: hidden;
-    display: flex;
     margin-bottom: 600px;
     .banner{
         position: absolute;
         top: 120px;
         right:-2px;
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        background-position: center center;
-        z-index: 0;
+        z-index: -1;
     }
-    .more{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        margin-top: 100px;
-        margin-bottom: 60px;
-        position: absolute;
-        h1{    
-            text-align: center;  
-            text-transform: uppercase;
-            @include fonts (60px,$font-prox-black,900,$p-3);
-            text-shadow: 0px 3px 4px rgba(40, 40, 40, 0.75);
-            margin-bottom: 80px;
-        span{
-            @include fonts (60px,$font-prox-black,900,$p-1);
-        }
+
+}
+.more{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    position: absolute;
+    h1{    
+        text-align: center;  
+        text-transform: uppercase;
+        @include fonts (60px,$font-prox-black,900,$p-3);
+        text-shadow: 0px 3px 4px rgba(40, 40, 40, 0.75);
+        margin-bottom: 80px;
+    span{
+        @include fonts (60px,$font-prox-black,900,$p-1);
     }
-    p{   
-        text-align: center;
-        @include fonts (20px,$font-prox-sm,400,$p-3);
-        margin-bottom: 20px;
-        }
 }
+p{   
+    text-align: center;
+    @include fonts (20px,$font-prox-sm,400,$p-3);
+    margin-bottom: 20px;
+    }
 }
-  
