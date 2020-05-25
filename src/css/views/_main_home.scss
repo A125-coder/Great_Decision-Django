@@ -32,17 +32,15 @@
         color: $p-2;
     }
 }
-.button-more{      
-    margin-bottom: 100px;
-}
-
-
   
 }
+
+
 .mainTwo{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin: 100px 0;
     .photo{
         position: relative;
     .border{
@@ -72,7 +70,7 @@
 }
 
 .mainThree{
-    margin-top: 200px;
+    margin-top: 100px;
     text-align: center;
     h2{
         margin-bottom: 20px;
