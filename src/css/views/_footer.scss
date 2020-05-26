@@ -1,21 +1,32 @@
 footer{
-.menu-footer{
-        background-color: $p-6;
+    .container-fluid:nth-child(1){
+        background-color: $bg-footer--color-primary_1;
+        @include fonts(15px, $font-prox-reg,normal, $font-text-footer--color-primary_1);
+        box-shadow: $default--color__4 0 0 5px;
         position: relative;
         z-index: 1;
     }
-    .d-flex{
-        background: linear-gradient($p-2, $p-6), url('../img/footer.png');
+    .container-fluid:nth-child(2){
+        background-image: linear-gradient($default--color__3, $default--color__3), url('../../img/footer.jpg');
         background-repeat: no-repeat;
         background-size: 100% auto;
         height: 318px;
         background-position: center center;
         header{
-            @include fonts(25px,$font-prox-reg,600,$p-3);
+            @include fonts(25px, $font-prox-reg,normal, $font-text-footer--color-primary_1);
             .yellow{
-                color: $p-1;
-                font-size: 25px;
+                color: $font-text-footer--color-primary_2;
             }
         }
+        main{
+            @include fonts(14px, $font-prox-reg,auto, $font-text-footer--color-primary_3);
+        }
+    }
+    .container-fluid:nth-child(3){
+        background-color: $bg-footer--color-primary_1;
+        @include fonts(18px, $font-sfui-reg,normal, $font-text-footer--color-primary_1);
+        box-shadow: $default--color__4 0 0 5px;
+        position: relative;
+        z-index: 1;
     }
 }

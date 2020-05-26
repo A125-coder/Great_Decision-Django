@@ -10,6 +10,9 @@ h1 {
 h2 {
   @include fonts (35px, $font-prox-black, 600, $p-2);
   text-transform: uppercase;
+  span {
+    @include fonts (35px, $font-prox-black, 900, $p-1);
+  }
 }
 
 h3 {
@@ -18,9 +21,7 @@ h3 {
 }
 
 
-span {
-  @include fonts (35px, $font-prox-black, 900, $p-1);
-}
+
 
 // // Параграфи
 .main-text {
@@ -76,25 +77,25 @@ select {
 
   a {
     text-decoration: none;
-    @include fonts(18px, $font-sfui-reg, 600, $p-2);
+    @include fonts(18px, $font-sfui-reg, 400, $p-2);
     display: inline-block;
     justify-self: stretch;
     padding-top: 15px;
   }
 
   a:hover {
-    @include fonts(18px, $font-sfui-reg, 600, $p-4);
+    @include fonts(18px, $font-sfui-reg, 400, $p-4);
   }
 }
 
 .menu-footer {
   a {
     text-decoration: none;
-    @include fonts(18px, $font-sfui-reg, 600, $p-3);
+    @include fonts(18px, $font-sfui-reg, 400, $p-3);
   }
 
   a:hover {
-    @include fonts(18px, $font-sfui-reg, 600, $p-4);
+    @include fonts(18px, $font-sfui-reg, 400, $p-4);
   }
 }
 
