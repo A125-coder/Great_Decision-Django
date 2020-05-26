@@ -2,165 +2,145 @@
 {% load static %}
 {% block content %}
 {% include "../partials/_header_img.html" %}
-<main>
-    <div class="main-fluid">
-        <div class="choice_of_housing">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text">
-                        <h1>Підбираємо <span>житло</span> під <br> кожну особистість</h1>
-                        <p class="text-title">Вибір власного житла - це один з найважливіших рішень у житті людини. Це
-                            не дивно, адже від вибору житла залежатиме комфорт і затишок проживання в певному середовищі
-                            кожної людинию.
-                            <br>
-                            Саме тому перед придбанням нової квартири, потрібно обов'язково ретельно підійти до цього
-                            питання, щоб не помилитися і зробити максимально правильний вибір квартири для свого
-                            подальшого життя.
-                        </p>
-                    </div>
-                </div>
+<div class="container">
+    <div class="mainOne">
+        <h2>Підбираємо <span>житло</span> під<br /> кожну особистість</h2>
+        <p class="main-text">Вибір власного житла- це один з найважливіших рішень у житті людини. Це не дивно, адже від
+            вибору житла
+            залежатиме комфорт і затишок<br /> проживання в певному середовищі кожної людини.<br />
+            Саме тому перед придбанням нової квартири, потрібно обов'язково ретельно підійти до цього питання, щоб не
+            помилитися і <br />
+            зробити максимально правильний вибір квартири для свого подальшого життя.</p>
+        <div class="col-xl-12 col-md-12 yellow_circle">
+            <div class="col-xl-2 col-md-2 circle">
+                <img src="{% static 'img/Apartment.png'%}" alt="Apartment" />
+            </div>
+            <div class="col-xl-2 col-md-2  circle">
+                <img src="{% static 'img/New house.png'%}" alt="New houses" />
+            </div>
+            <div class="col-xl-2 col-md-2  circle">
+                <img src="{% static 'img/House.png'%}" alt="House" />
+            </div>
+            <div class="col-xl-2 col-md-2 circle">
+                <img src="{% static 'img/Elite house.png'%}" alt="Elite houses" />
             </div>
         </div>
-        <div class="housing">
-            <div class="container">
-                <div class="row">
-                    <div class="col-3 main_smart">
-                        <div class="yellow">
-                            <img src="{% static 'img/Vector Smart Object.png' %}">
-                        </div>
-                        <div class="main_smart_div">
-                            <h4>Продаж квартир</h4>
-                            <p class="text-title">Ми підберемо квартиру на любий смк в районі, який вас цікавить</p>
-                        </div>
-                    </div>
-                    <div class="col-3 main_smart">
-                        <div class="yellow">
-                            <img src="{% static 'img/Vector Smart Object_2.png' %}">
-                        </div>
-                        <div class="main_smart_div">
-                            <h4>Новобудови</h4>
-                            <p class="text-title">Постійне оновлення ринку, тільки надійні забудовники</p>
-                        </div>
-                    </div>
-                    <div class="col-3 main_smart">
-                        <div class="yellow">
-                            <img src="{% static 'img/Vector Smart Object_3.png' %}">
-                        </div>
-                        <div class="main_smart_div">
-                            <h4>Житлові будинки</h4>
-                            <p class="text-title">Окремий будинок - мрія кожної родини. Найкращі будинки на будь який
-                                смак</p>
-                        </div>
-                    </div>
-                    <div class="col-3 main_smart">
-                        <div class="yellow">
-                            <img src="{% static 'img/Vector Smart Object_4.png' %}">
-                        </div>
-                        <div class="main_smart_div">
-                            <h4>Елітне житло</h4>
-                            <p>Підбір індивідуального житла для кожної особистості</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="about">
+            <div class="col-xl-3 col-md-3">
+                <h3>Продаж квартир</h3>
+                <p class="main-text">Ми підберемо квартиру на будь-який смак в районі, який вас цікавить</p>
             </div>
-            <div class="col-12 btn">
-                <button class="btn--forward"> Більше >> </button>
+            <div class="col-xl-3 col-md-3">
+                <h3>Новобудови</h3>
+                <p class="main-text">Постійне оновлення ринку, тільки надійні забудовники</p>
             </div>
-            <div class="choice">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6 photo">
-                            <div class="border"></div>
-                            <img src="{% static 'img/foto.png' %}">
-                        </div>
-                        <div class="col-6 select_div">
-                            <h2>Зробіть <span>вибір</span></h2>
-                            <select>
-                                <option disabled selected>Місто</option>
-                                <option></option>
-                            </select>
-                            <select>
-                                <option disabled selected>Тип житла</option>
-                                <option></option>
-                            </select>
-                            <select>
-                                <option disabled selected>Площа</option>
-                                <option></option>
-                            </select>
-                            <select>
-                                <option disabled selected>Вартість</option>
-                                <option></option>
-                            </select>
-                            <div class="d-flex col-12">
-                                <button class="btn--show_all">Показати все</button>
-                                <button class="btn--forward">Вперед >></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-xl-3 col-md-3">
+                <h3>Житлові будинки</h3>
+                <p class="main-text">Окремий будинок - мрія кожної родини. Найкращі будинки на будь який смакю</p>
             </div>
-            <div class="container">
-                <div class="advantages">
-                    <h2 class="col-12">деякі наші <span>переваги</span></h2>
-                    <p class="text-title">Переконайтеся в тому, що ми найкращі, ряд переваг над нашими конкурентами</p>
-                </div>
-                <div class="advantages_list d-flex col-12 flex-wrap">
-                    <div class="row col-12">
-                        <div class="col-4 d-block">
-                            <img src="{% static 'img/individual approach.png' %}" alt="in_pid" />
-                            <h4>індивідуальний підхід</h4>
-                        </div>
-                        <div class="col-4 d-block">
-                            <img src="{% static 'img/the highest standards.png' %}" alt="high_standarts" />
-                            <h4>найвищі стандарти</h4>
-                        </div>
-                        <div class="col-4 d-block">
-                            <img src="{% static 'img/lawyers support.png' %}" alt="yur_support" />
-                            <h4>юридична підтримка</h4>
-                        </div>
-                    </div>
-                    <div class="row col-12">
-                        <div class="col-4 d-block">
-                            <img src="{% static 'img/flexib prices.png' %}" alt="diapason_tsin" />
-                            <h4>гнучкий діапазон цін</h4>
-                        </div>
-                        <div class="col-4 d-block">
-                            <img src="{% static 'img/money b.png' %}" alt="garantiya" />
-                            <h4>гарнатія повернення <br> коштів</h4>
-                        </div>
-                        <div class="col-4 d-block">
-                            <img src="{% static 'img/serv.png' %}" alt="24-7-servise" />
-                            <h4>24/7 обслуговування <br> замовників</h4>
-                        </div>
-                        <button class="btn--forward">Більше >></button>
-                    </div>
-                </div>
+            <div class="col-xl-3 col-md-3">
+                <h3>Елітне житло</h3>
+                <p class="main-text">Підбір індивідуального житла для кожної особистості</p>
             </div>
-            <div class="container lightgrey">
-                <h2>ми пропонуємо<br>
-                    <span>житло таких рівнів</span></h2>
-                <p class="text-title">Ми допоможемо підібрати елітне житло різних рівнів на будь який <br>смак для
-                    найвибагливіших замовників</p>
-                <div class="house_level d-flex justify-evently">
-                    <div id="standart">
-                        <h3>STANDART</h3>
-                        <img src="{% static 'img/standart-home.png' %}" alt="standart_home">
-                        <button class="btn--forward">Підібрати</button>
-                    </div>
-                    <div id="luxory">
-                        <h3>LUXURY</h3>
-                        <img src="{% static 'img/luxury-homes-in-texas.png' %}" alt="luxury_home">
-                        <button class="btn--forward">Підібрати</button>
-                    </div>
-                    <div id="premium">
-                        <h3>PREMIUM</h3>
-                        <img src="{% static 'img/premium-house.png' %}" alt="premium_home">
-                        <button class="btn--forward">Підібрати</button>
-                    </div>
-                </div>
+        </div>
+        <button class="button-more">Більше >></button>
+    </div>
+    <div class="col-12 mainTwo">
+        <div class="offset-1 col-xl-5 col-md-5 photo">
+            <div class="border"></div>
+            <img src="{% static 'img/foto.png'%}" alt="photo" />
+        </div>
+        <div class="col-xl-6 col-md-6 dropdown">
+            <h2>Зробіть <span>Вибір</span></h2>
+            <select id="town">
+                <option value="Місто">Місто</option>
+                <option value="rivne">Рівне</option>
+                <option value="kyiv">Київ</option>
+                <option value="lviv">Львів</option>
+            </select>
+            <select id="house_type">
+                <option value="Тип житла">Тип житла</option>
+                <option value="one">Одноповерхові будинки</option>
+                <option value="two">Двоповерхові будинки</option>
+                <option value="three">Мансардні будинки</option>
+            </select>
+            <select id="square_meter">
+                <option value="Площа">Площа</option>
+                <option value="one">&#60; 30 м&#178;</option>
+                <option value="two">30 - 60 м&#178;</option>
+                <option value="three">&#62; 60 м&#178;</option>
+            </select>
+            <select id="value">
+                <option value="value">Вартість</option>
+                <option value="one">&#60; 300 тис. грн.</option>
+                <option value="two">300 - 600 тис. грн.</option>
+                <option value="three">&#62; 600 тис. грн.</option>
+            </select>
+            <div class="offset-1">
+                <button class="button-show">Показати все >></button>
+                <button class="offset-1 button-ahead">Вперед >></button>
             </div>
         </div>
     </div>
-</main>
+
+    <div class="mainThree">
+        <h2>Деякі наші <span>переваги</span></h2>
+        <p class="text-title">переконайтеся в тому, що ми найкращі, ряд переваг над нашими конкурентами:</p>
+        <div class="advantages">
+            <div class="col-xl-3 col-md-3 one">
+                <img src="{% static 'img/1.png'%}" alt="first advantage">
+                <p class="text-title">індивідуальний підхід</p>
+            </div>
+            <div class="offset-1 col-xl-3 col-md-3 two">
+                <img src="{% static 'img/2.png'%}" alt="second advantage">
+                <p class="text-title">найвищі стандарти</p>
+            </div>
+            <div class="offset-1 col-xl-3 col-md-3 three">
+                <img src="{% static 'img/3.png'%}" alt="third advantage">
+                <p class="text-title">юридична підтримка</p>
+            </div>
+            <div class="col-xl-3 col-md-3 four">
+                <img src="{% static 'img/4.png'%}" alt="fourth advantage">
+                <p class="text-title">гнучкий діапазон цін</p>
+            </div>
+            <div class="offset-1 col-xl-3 col-md-3 five">
+                <img src="{% static 'img/5.png'%}" alt="fifth advantage">
+                <p class="text-title">гарантія повернення коштів</p>
+            </div>
+            <div class="offset-1 col-xl-3 col-md-3 six">
+                <img src="{% static 'img/24_7.png'%}" alt="sixth advantage">
+                <p class="text-title">24/7 обслуговування замовників</p>
+            </div>
+        </div>
+        <button class="offset-5 col-2 button-more">Більше >></button>
+    </div>
+</div>
+
+<div class="container-fluid Four">
+    <div class="container mainFour">
+        <h2>ми пропонуємо <br /> <span>житло таких рівнів</span></h2>
+        <p class="main-text">Ми допоможемо підібрати елітне житло різних рівнів на будь який смак для <br />
+            найвибагливіших замовників
+        </p>
+        <div class="house_level d-flex flex-wrap-wrap col-12">
+            <div id="standart">
+                <h2>STANDART</h2>
+                <img src="{% static 'img/OBC81E0.png'%}" alt="standart_home">
+                <button class="button-more">Підібрати</button>
+            </div>
+            <div id="luxory">
+                <h2>LUXURY</h2>
+                <img src="{% static 'img/luxury-homes-in-texas.png'%}" alt="luxury_home">
+                <button class="button-more">Підібрати</button>
+            </div>
+            <div id="premium">
+                <h2>PREMIUM</h2>
+                <img src="{% static 'img/завантаження.png'%}" alt="premium_home">
+                <button class="button-more">Підібрати</button>
+            </div>
+            </h2>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
