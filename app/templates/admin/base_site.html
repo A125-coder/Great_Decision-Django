@@ -1,12 +1,178 @@
 {% extends "admin/base.html" %}
 {% load static %}
 
+
 {% block branding %}
-    <h1 id="header">
-        <img src="{%static 'img/logo1.png' %}" alt="">
-        Great<br/> Decision
-    </h1>
+<h1 id="header">
+    <img src="{%static 'img/logo1.png' %}" alt="" />
+    Great<br /> Decision
+</h1>
 {% endblock %}
+
 {% block extrastyle %}
-<link rel="stylesheet" href="{% static 'css/admin.css' %}"/>
+<link rel="stylesheet" href="{% static 'css/admin.css' %}" />
+<style>
+    @font-face {
+        font-family: ProximaNovaCond-Bold;
+        src: url("{% static 'fonts/ProximaNova/WOFF/ProximaNovaCond-Bold.woff' %}");
+    }
+
+    @font-face {
+        font-family: ProximaNovaCond-Regular;
+        src: url("{% static 'fonts/ProximaNova/WOFF/ProximaNovaCond-Regular.woff' %}");
+    }
+
+    @font-face {
+        font-family: ProximaNovaCond-Semibold;
+        src: url("{% static 'fonts/ProximaNova/WOFF/ProximaNovaCond-Semibold.woff' %}");
+    }
+
+    body {
+        background-image: url("{% static 'img/city-wallpaper-11.jpg' %}");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+
+    }
+
+    #header {
+        background-color: #f3d43d;
+        color: #4b434f;
+        font-family: ProximaNovaCond-Regular;
+    }
+
+    #header h1 {
+        color: #4b434f;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-family: ProximaNovaCond-Bold;
+    }
+
+    .module caption,
+    .inline-group h2 {
+        background-color: #f3d43d;
+    }
+
+    #user-tools,
+    #header a:link,
+    #header a:visited {
+        color: #4b434f;
+        font-size: 15px;
+    }
+
+    #user-tools a:focus,
+    #user-tools a:hover {
+        text-decoration: none;
+        border-bottom-color: #363636;
+        color: #363636;
+    }
+
+    a.section:link,
+    a.section:visited {
+        color: #4b434f;
+        font-family: ProximaNovaCond-Bold;
+        font-size: 15px;
+    }
+
+    a:link,
+    a:visited {
+        color: #4b434f;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    div.breadcrumbs {
+        background: #edc814;
+        color: #4b434f;
+    }
+
+    div.breadcrumbs a {
+        color: #4b434f;
+        font-family: ProximaNovaCond-Semibold;
+        font-size: 17px;
+    }
+
+    div.breadcrumbs a:hover {
+        color: #666;
+    }
+
+    .module h2,
+    .module caption,
+    .inline-group h2 {
+        background: #f3d43d;
+        color: #4b434f;
+    }
+
+    .change-list .filtered tr {
+        border-right: none;
+        background: #cac9ca;
+        color: #666;
+    }
+
+    thead th a:link,
+    thead th a:visited {
+        color: #666;
+        background: #f6f6f6;
+    }
+
+    #changelist-filter a:focus,
+    a:hover {
+        color: #4b434f;
+    }
+
+    .button.default,
+    input[type=submit].default,
+    .submit-row input.default {
+        background: #edc814;
+        font-family: ProximaNovaCond-Semibold;
+    }
+
+    .button:active,
+    input[type=submit]:active,
+    input[type=button]:active,
+    .button:focus,
+    input[type=submit]:focus,
+    input[type=button]:focus,
+    .button:hover,
+    input[type=submit]:hover,
+    input[type=button]:hover,
+    .button.default,
+    input[type=submit].default:active,
+    input[type=submit].default:focus,
+    input[type=submit].default:hover {
+        background: #f7941e;
+        box-shadow: 0 2px 5px 0 rgba(2, 3, 3, .75);
+        font-family: ProximaNovaCond-Semibold;
+    }
+
+    .submit-row a.deletelink:hover {
+        box-shadow: 0 2px 5px 0 rgba(2, 3, 3, .75);
+        font-family: ProximaNovaCond-Semibold;
+    }
+
+    .submit-row a.deletelink {
+        font-family: ProximaNovaCond-Semibold;
+    }
+
+    .object-tools a:link,
+    .object-tools a:visited {
+        background: #4b434f;
+        font-family: ProximaNovaCond-Semibold;
+    }
+
+    .object-tools a:hover {
+        box-shadow: 0 2px 5px 0 rgba(2, 3, 3, .75);
+        font-family: ProximaNovaCond-Semibold;
+    }
+
+    .button,
+    input[type=submit],
+    input[type=button],
+    .submit-row input,
+    a.button {
+        background: #edc814;
+        font-family: ProximaNovaCond-Semibold;
+    }
+</style>
 {% endblock %}
