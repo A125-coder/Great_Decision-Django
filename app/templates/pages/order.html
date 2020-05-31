@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <p class="text-title">Вибір власного житла- це один з найважливіших рішень у житті людини. Це не дивно, адже від
+        вибору житла залежатиме комфорт і затишок проживання в певному середовищі кожної людини. <br />
+        Саме тому перед придбанням нової квартири, потрібно обов'язково ретельно підійти до цього питання, щоб не
+        помилитися і
+        зробити максимально правильний вибір квартири для свого подальшого життя.</p>
+    <p class="main-text"> Для вашої зручності на порталі оголошення про продаж квартир згрупували за кількістю кімнат:
+        однокімнатні, двокімнатні і трикімнатні квартири в Києві, щоб ви могли зразу перейти до перегляду пропозицій,
+        які вас цікавлять. Також ви одразу можете дізнатися ціни на квартири в Києві на масивах Печерськ, Оболонь,
+        Позняки, Троєщина, Виноградар, Поділ, також і в інших частинах столиці, в центрі чи на окраїні Києва. Все
+        залежить від ваших можливостей і побажань. Якщо ж вас цікавлять лише нові квартири в новобудовах Києва, радимо
+        скористатися розділом «Новобудови в Києві», де ви знайдете квартири від забудовника з описом кожного житлового
+        комплексу.</p>
+    
+        <div class="col-12 mainTwo">
+            <div class="offset-1 col-xl-5 col-md-5 photo">
+                <div class="border"></div>
+                <img src="{% static 'img/foto.png' %}" alt="photo" />
+            </div>
+            <div class="col-xl-6 col-md-6 dropdown">
+                <h2>Зробіть <span>Вибір</span></h2>
+                <select id="town">
+                    <option value="Місто">Місто</option>
+                    <option value="rivne">Рівне</option>
+                    <option value="kyiv">Київ</option>
+                    <option value="lviv">Львів</option>
+                </select>
+                <select id="house_type">
+                    <option value="Тип житла">Тип житла</option>
+                    <option value="one">Одноповерхові будинки</option>
+                    <option value="two">Двоповерхові будинки</option>
+                    <option value="three">Мансардні будинки</option>
+                </select>
+                <select id="square_meter">
+                    <option value="Площа">Площа</option>
+                    <option value="one">&#60; 30 м&#178;</option>
+                    <option value="two">30 - 60 м&#178;</option>
+                    <option value="three">&#62; 60 м&#178;</option>
+                </select>
+                <select id="value">
+                    <option value="value">Вартість</option>
+                    <option value="one">&#60; 300 тис. грн.</option>
+                    <option value="two">300 - 600 тис. грн.</option>
+                    <option value="three">&#62; 600 тис. грн.</option>
+                </select>
+                <div class="offset-1">
+                    <button class="button-show">Показати все >></button>
+                    <button class="offset-1 button-ahead">Вперед >></button>
+                </div>
+            </div>
+        </div>
+
+    
+</div>
+{% endblock %}
