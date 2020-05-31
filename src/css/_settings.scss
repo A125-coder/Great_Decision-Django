@@ -51,25 +51,51 @@ select {
   @include fonts (20px, $font-prox-reg, 500, $p-2);
   padding: 0 20px 0;
 }
-
-// input:active {
-//   background-color: $default--color__1;
-//   border: $btn--bg-color-primary_1 solid 1px;
-//   width: 100%;
-//   @include fonts(15px, $font-proximanova-regular, $font-text--color-primary, 400);
-//   padding: 15px;
-//   height: 45px;
-//   border-radius: 30px;
-// }
-// input:hover {
-//   background-color: bg-main--color-primary_2;
-//   border: $btn--bg-color-primary_1 solid 1px;
-//   width: 100%;
-//   @include fonts(15px, $font-proximanova-regular, $font-text--color-primary, 400);
-//   padding: 15px;
-//   height: 45px;
-//   border-radius: 30px;
-// }
+select:active {
+  background-color: $default--color__1;
+  border: $btn--bg-color-primary_1 solid 1px;
+  width: 100%;
+  @include fonts(20px, $font-prox-reg, $font-text--color-primary, 400);
+  padding: 0 20px 0;
+  height: 50px;
+  border-radius: 50px;
+}
+select:hover {
+  background-color: bg-main--color-primary_2;
+  border: $btn--bg-color-primary_1 solid 1px;
+  width: 100%;
+  @include fonts(20px, $font-prox-reg, $font-text--color-primary, 400);
+  padding: 0 20px 0;
+  height: 50px;
+  border-radius: 50px;
+}
+input {
+  background-color: $default--color__1;
+  border: $default--color__2 solid 1px;
+  width: 100%;
+  @include fonts(15px, $font-prox-reg, $font-text--color-primary, 400);
+  padding: 15px;
+  height: 45px;
+  border-radius: 30px;
+}
+input:active {
+  background-color: $default--color__1;
+  border: $btn--bg-color-primary_1 solid 1px;
+  width: 100%;
+  @include fonts(15px, $font-prox-reg, $font-text--color-primary, 400);
+  padding: 15px;
+  height: 45px;
+  border-radius: 30px;
+}
+input:hover {
+  background-color: bg-main--color-primary_2;
+  border: $btn--bg-color-primary_1 solid 1px;
+  width: 100%;
+  @include fonts(15px, $font-prox-reg, $font-text--color-primary, 400);
+  padding: 15px;
+  height: 45px;
+  border-radius: 30px;
+}
 
 // // Лінки
 .menu {
@@ -107,4 +133,69 @@ select {
     a:hover{
         @include fonts(14px, $font-prox-reg, 400, $p-4);
     }
+}
+
+
+  // Пагінація
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+  
+    li{
+      background-color: $default--color__1;
+      border: 1px solid #dadada;
+      margin: 5px;
+      padding: 7px 22px;
+      border-radius: 15px;
+      box-shadow: 2px 2px 2px rgba(109, 109, 109, 0.3);
+   
+      a{
+          @include fonts(15px, $font-prox-eb,400, $font-h1--color-primary);
+          text-decoration: none;
+      }
+      a:hover{
+          @include fonts(15px, $font-prox-eb,400, $font-h1--color-primary);
+          text-decoration: none;
+      }
+      } 
+      li:hover{
+          background-color: $btn--bg-color-primary_1;
+          border: 1px solid #dadada;
+          margin: 5px;
+          padding: 7px 22px;
+          border-radius: 15px;
+          box-shadow: 2px 2px 2px rgba(109, 109, 109, 0.3);
+    }
+  }
+
+// textarea
+textarea {
+  background-color: $default--color__1;
+  border: $default--color__2 solid 1px;
+  width: 100%;
+  @include fonts(15px, $font-prox-reg, $font-text--color-primary, 400);
+  padding: 15px;
+  height: 45px;
+  border-radius: 30px;
+}
+textarea:active {
+  background-color: $default--color__1;
+  border: $btn--bg-color-primary_1 solid 1px;
+  width: 100%;
+  @include fonts(15px, $font-prox-reg, $font-text--color-primary, 400);
+  padding: 15px;
+  height: 45px;
+  border-radius: 30px;
+}
+textarea:hover {
+  background-color: $bg-main--color-primary_2;
+  border: $btn--bg-color-primary_1 solid 1px;
+  width: 100%;
+  @include fonts(15px, $font-prox-reg, $font-text--color-primary, 400);
+  padding: 15px;
+  height: 45px;
+  border-radius: 30px;
 }

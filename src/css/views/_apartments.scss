@@ -1,0 +1,70 @@
+.apartments{ 
+  .flat--bcg {
+    background-color: $bg-main--color-primary_2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border: 1px solid #f8f8f8;
+    margin-bottom: 30px;
+  }
+
+  .upper {
+    margin: 0 20px 40px 20px;
+  }
+
+  .info {
+    padding-top: 50px;
+  }
+
+  .title {
+    @include fonts(15px, $font-prox-eb, $font-h1--color-primary, 400);
+  }
+
+  .name {
+    @include fonts(15px, $font-prox-reg, $font-h1--color-primary, 400);
+    margin-left: 10px;
+  }
+
+  h5 {
+    @include fonts(24px, $font-sfui-reg, $font-h1--color-primary, 400);
+    padding-bottom: 30px;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .space {
+    height: 40px;
+  }
+
+  .border1_1, .border1_2{
+    border: solid 16px $p-1;
+    box-shadow: 0px 2px 5px 0px rgba(2, 3, 3, 0.75);
+    width: 390px;
+    height: 280px;
+    position: relative;
+}
+  .border1_1{
+    float: right;
+}
+  .ap1, .ap2{
+    width: 510px;
+    height: 320px;
+    position: absolute;
+}
+  .ap1{
+    top: -76px;
+    left: 0;
+  }
+  .ap2{
+    top: -76px;
+    left: 60px;
+  }
+  .pic{
+    margin-top: 100px;
+  }
+}     
