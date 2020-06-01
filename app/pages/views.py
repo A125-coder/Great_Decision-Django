@@ -23,8 +23,8 @@ def we_offer(request):
 
 def apartments(request):
     data = {"header_h1": "КВАРТИРИ <span>ДЛЯ ВАС</span>",
-            "header_p": "<a href='index.html'>Головна</a> >> <a href='apartments.html'>Квартири для вас</a>"}
-    return render(request, 'pages/apartments.html', context=data)
+            "header_p": "<a href='index.html'>Головна</a> >> <a href='apartment.html'>Квартири для вас</a>"}
+    return render(request, 'pages/apartment.html', context=data)
 
 def order(request):
     data = {"header_h1": "ЗАМОВИТИ",
