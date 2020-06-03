@@ -1,16 +1,25 @@
 from django.shortcuts import render
+from django.core.paginator import Paginator
+from django.shortcuts import get_object_or_404
 from .models import Apartments
 
-# Create your views here.
+
 def index(request):
-    apartments = Apartments.objects.order_by("-list_date").filter(is_published = True)
+    apartments = Apartments.objects.order_by(
+        "-list_date").filter(is_published=True)
 
+    paginator = Paginator(apartments, 5)
+    page = request.GET.get('page')
+    pagged_apartments = paginator.get_page(page)
     context = {
-        'apartments':apartments
+        'apartments': pagged_apartments
     }
-    return render(request, "pages/apartment.html", context)
+    return render(request, "pages/apartments.html", context)
 
-def select(request):
-    data = {"header_h1": "КВАРТИРИ <span>ДЛЯ ВАС</span>",
-            "header_p": "<a href='index.html'>Головна</a> >> <a href='apartment.html'>Квартири для вас</a> >> Двокімнатна квартира"}
-    return render(request, 'pages/select_apartment.html', context=data)
+
+def apartment(request, apartment_id):
+    apartment = get_object_or_404(Apartments, pk=apartment_id)
+    context = {
+        'apartment': apartment
+    }
+    return render(request, 'pages/apartment.html', context)
