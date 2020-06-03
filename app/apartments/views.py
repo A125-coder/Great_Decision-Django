@@ -9,3 +9,8 @@ def index(request):
         'apartments':apartments
     }
     return render(request, "pages/apartment.html", context)
+
+def select(request):
+    data = {"header_h1": "КВАРТИРИ <span>ДЛЯ ВАС</span>",
+            "header_p": "<a href='index.html'>Головна</a> >> <a href='apartment.html'>Квартири для вас</a> >> Двокімнатна квартира"}
+    return render(request, 'pages/select_apartment.html', context=data)
