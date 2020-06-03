@@ -97,45 +97,6 @@ input:hover {
   border-radius: 30px;
 }
 
-// // Лінки
-.menu {
-  cursor: pointer;
-
-  a {
-    text-decoration: none;
-    @include fonts(18px, $font-sfui-reg, 400, $p-2);
-    display: inline-block;
-    justify-self: stretch;
-    padding-top: 15px;
-  }
-
-  a:hover {
-    @include fonts(18px, $font-sfui-reg, 400, $p-4);
-  }
-}
-
-.menu-footer {
-  a {
-    text-decoration: none;
-    @include fonts(18px, $font-sfui-reg, 400, $p-3);
-  }
-
-  a:hover {
-    @include fonts(18px, $font-sfui-reg, 400, $p-4);
-  }
-}
-
-.link-footer{
-    a{
-        @include fonts(14px, $font-prox-reg, 400, $p-3);
-        text-decoration: none;
-    }
-    a:hover{
-        @include fonts(14px, $font-prox-reg, 400, $p-4);
-    }
-}
-
-
   // Пагінація
 
   .pagination {
@@ -199,3 +160,44 @@ textarea:hover {
   height: 45px;
   border-radius: 30px;
 }
+
+
+// // Лінки
+.menu {
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    @include fonts(18px, $font-sfui-reg, 400, $p-2);
+    display: inline-block;
+    justify-self: stretch;
+    padding-top: 15px;
+  }
+
+  a:hover {
+    @include fonts(18px, $font-sfui-reg, 400, $p-4);
+  }
+}
+
+.menu-footer {
+  a {
+    text-decoration: none;
+    @include fonts(18px, $font-sfui-reg, 400, $p-3);
+  }
+
+  a:hover {
+    @include fonts(18px, $font-sfui-reg, 400, $p-4);
+  }
+}
+
+.link-footer{
+    a{
+        @include fonts(14px, $font-prox-reg, 400, $p-3);
+        text-decoration: none;
+    }
+    a:hover{
+        @include fonts(14px, $font-prox-reg, 400, $p-4);
+    }
+}
+
+

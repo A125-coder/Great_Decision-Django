@@ -116,11 +116,6 @@
             margin-bottom: 20px;
         }
     }
-}
-
-.house_level {
-    justify-content: center;
-}
 
 .house_level img {
     width: 285px;
@@ -147,6 +142,21 @@
     border-radius: 5%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)
 }
+    #standart:hover,
+    #luxory:hover,
+    #premium:hover {
+        width: 390px;
+        height: 375px;
+        // margin: -10px 0px 0px 0px;
+        // z-index: 1;
+
+    button {
+        margin-top: 40px
+    }
+}
+}
+
+
 
 .text_div {
     display: none;
@@ -158,25 +168,16 @@
         margin-bottom: 50px;
         line-height: 35px;
     }
+    
 }
+
 
 
 
 .mainFive {
     margin: 90px 0;
-    // display: inline-block;
+    display: inline-block;
     background-color: $p-3;
 }
 
-#standart:hover,
-#luxory:hover,
-#premium:hover {
-    width: 390px;
-    height: 375px;
-    margin: -10px 0px 0px 0px;
-    z-index: 1;
 
-    button {
-        margin-top: 40px
-    }
-}
