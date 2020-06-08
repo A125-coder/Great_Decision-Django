@@ -4,3 +4,9 @@
     font-weight: bold;
     font-size: 20px;
 }
+.realtor{
+    border: orange solid 5px;
+    height: 250px;
+    width: 260px;
+    text-align: center;
+}

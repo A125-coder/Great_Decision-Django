@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404
-from .models import Apartments
+from .models import Apartments, Realtor
 
 
 def index(request):
@@ -20,6 +20,6 @@ def index(request):
 def apartment(request, apartment_id):
     apartment = get_object_or_404(Apartments, pk=apartment_id)
     context = {
-        'apartment': apartment
+        'apartment': apartment,
     }
     return render(request, 'pages/apartment.html', context)

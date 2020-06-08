@@ -6,16 +6,19 @@
         <div class="row">
             <div class="col-12">
                 <p class="text-title upper">
-                    Вибір власного житла- це один з найважливіших рішень у житті людини. Це не дивно, адже від вибору житла залежатиме комфорт і затишок проживання в певному середовищі кожної людини.<br>Саме тому перед придбанням нової квартири, потрібно обов'язково ретельно підійти до цього питання, щоб не помилитися і зробити максимально правильний вибір квартири для свого подальшого життя.
+                    Вибір власного житла- це один з найважливіших рішень у житті людини. Це не дивно, адже від вибору
+                    житла залежатиме комфорт і затишок проживання в певному середовищі кожної людини.<br>Саме тому перед
+                    придбанням нової квартири, потрібно обов'язково ретельно підійти до цього питання, щоб не помилитися
+                    і зробити максимально правильний вибір квартири для свого подальшого життя.
                 </p>
             </div>
-<!-- Галерея------------------------------- -->
+            <!-- Галерея------------------------------- -->
             <div class="col-12 galery">
-				<div class="main-apartment">
-                    <div class="right"> <img src="{% static 'img/apartments/right.png'%}"/> </div>
+                <div class="main-apartment">
+                    <div class="right"> <img src="{% static 'img/apartments/right.png'%}" /> </div>
                     <img src="{{ apartment.photo_0.url }}" width="100%" alt="" id="main">
-                    <div class="left"> <img src="{% static 'img/apartments/left.png'%}"/> </div>
-				</div>
+                    <div class="left"> <img src="{% static 'img/apartments/left.png'%}" /> </div>
+                </div>
             </div>
             <div class="hidden">
                 <div class="slike">
@@ -29,11 +32,11 @@
                     <img src="{{ apartment.photo_7.url }}" width="100%" alt="" class="small-slike">
                 </div>
             </div>
-<!-- --------------------------------------------------------- -->
+            <!-- --------------------------------------------------------- -->
         </div>
     </div>
     <div class="container">
-        <div class="row flat--bcg">    
+        <div class="row flat--bcg">
             <div class="offset-1 col-2 title">
                 <p>Місто:</p>
                 <p>Тип житла:</p>
@@ -51,9 +54,28 @@
                 <p>{{ apartment.floor }}</p>
             </div>
             <div class="col-7">
-                <p class="main-text">{{ apartment.description }}</p> 
-                <p class="price"><span class="name-big" >Вартість</span> <span class="title-big">{{ apartment.price }} тис.дол</span></p> 
+                <p class="main-text">{{ apartment.description }}</p>
+                <p class="price"><span class="name-big">Вартість</span> <span class="title-big">{{ apartment.price }}
+                        тис.дол</span></p>
             </div>
+
+        </div>
+        <div class="col-7 realtor">
+            <p class="price"><span class="name-big">Ріелтор</span> <span class="title-big">{{ apartment.realtor }}
+                </span></p>
+            <div class="offset-7 col-lg-5 col-sm-12">
+                <img class="realtor_img" src='{{ apartment.realtor.photo.url }}' alt="Photo" />
+            </div>
+
+            <p class="price"><span class="name-big">Місто</span> <span class="title-big">{{ apartment.realtor.city }}
+                </span>
+            </p>
+            <p class="price"><span class="name-big">Телефон</span> <span class="title-big">{{ apartment.realtor.phone }}
+                </span>
+            </p>
+            <p class="price"><span class="name-big">Email</span> <span class="title-big">{{ apartment.realtor.email }}
+                </span>
+            </p>
         </div>
     </div>
 </section>

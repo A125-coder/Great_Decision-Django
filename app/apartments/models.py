@@ -1,5 +1,6 @@
 from django.db import models
 from realtor.models import Realtor
+# from django.db.models import F
 from datetime import datetime
 
 # Create your models here.
