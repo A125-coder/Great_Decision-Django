@@ -13,26 +13,36 @@
                 <p id="root"></p>
             </div>
             <div id="carou_right"><img src="{% static 'img/right_arrow.png'%}" alt="right_arrow"></div>
-    
+
             <!--Зразки відгуків-->
-    
-            <div class="text_div"><p class="text_rew">Дуже вдячна компанії за підібране житло, за те , що прислухались до всіх моїх побажань.
-                Найкраща цінова політика, ще й надали знижку при купівлі. 100%  буду рекомендувати своїм друзям та знайомим. Дуже дякую.
-                <br><span class="custom_name">Світлана Денисюк, Київ</span></p></div>
-            <div class="text_div"><p class="text_rew">Best rieltor company in the world! I will recomend you to my friends in Hollywood. Щиро дякую!
-                <br><span class="custom_name">Angelina Jolie, LA</span></p></div>
-            <div class="text_div"><p class="text_rew">Perfect! Just perfect! Thank you guys! Now I have the best appartments in NY
-                <br><span class="custom_name">Ryan Gosling, New York</span></p></div>
-    
-            <!--////////////////-->    
-    
+
+            <div class="text_div">
+                <p class="text_rew">Дуже вдячна компанії за підібране житло, за те , що прислухались до всіх моїх
+                    побажань.
+                    Найкраща цінова політика, ще й надали знижку при купівлі. 100% буду рекомендувати своїм друзям та
+                    знайомим. Дуже дякую.
+                    <br><span class="custom_name">Світлана Денисюк, Київ</span></p>
+            </div>
+            <div class="text_div">
+                <p class="text_rew">Best rieltor company in the world! I will recomend you to my friends in Hollywood.
+                    Щиро дякую!
+                    <br><span class="custom_name">Angelina Jolie, LA</span></p>
+            </div>
+            <div class="text_div">
+                <p class="text_rew">Perfect! Just perfect! Thank you guys! Now I have the best appartments in NY
+                    <br><span class="custom_name">Ryan Gosling, New York</span></p>
+            </div>
+
+            <!--////////////////-->
+
         </div>
-        
+
         <div class="row">
             <div class="offset-5 col-2">
-                <button class="button-more">Більше >></button>
-            </div>        
+                <a class="button-more" {% if "testimonials" == request.path  %} class="active"
+                        {% endif %} href="{% url 'testimonials' %}">Більше >></a>
+            </div>
         </div>
-    
+
     </div>
 </div>
