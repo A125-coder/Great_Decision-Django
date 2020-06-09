@@ -1,5 +1,12 @@
 asgiref==3.2.7
+autopep8==1.5.2
 Django==3.0.6
+django-appconf==1.0.4
+libsass==0.20.0
+Pillow==7.1.2
 psycopg2==2.8.5
+pycodestyle==2.6.0
 pytz==2020.1
+rjsmin==1.1.0
+six==1.15.0
 sqlparse==0.3.1

@@ -6,7 +6,26 @@ from django.contrib.auth.models import User
 
 
 def login(request):
-    return render(request, "accounts/login.html")
+    # if request.method == 'GET':
+    #     user_name = request.GET.username
+    #     password = request.GET.password
+
+    #     if User.objects.filter(username!=user_name).exists():
+    #         print("User doesn't exist. Please register")
+    #         return redirect('register')
+
+    #         if User.objects.filter(password!=password).exists():
+    #             return redirect('register')
+            
+    #         else:
+    #             return redirect('index')
+    #     else:
+    #         return redirect('index')
+
+    data = {"header_h1": "Увійти в кабінет",
+            "header_p": "<a href='index.html'>Головна</a> >> Увійти в кабінет"}
+
+    return render(request, "accounts/login.html",context=data)
 
 
 def register(request):
@@ -42,7 +61,10 @@ def register(request):
             print("Password don't match")
             return redirect('register')
 
-    return render(request, "accounts/register.html")
+    data = {"header_h1": "Реєстрація",
+            "header_p": "<a href='index.html'>Головна</a> >> Реєстрація"}
+
+    return render(request, "accounts/register.html", context=data)
 
 
 def logout(request):
