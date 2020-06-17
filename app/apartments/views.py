@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404
 from .models import Apartments, Realtor
@@ -49,6 +49,7 @@ def favorite(request):
         favorite_apartment = apartment.filter(
             is_favorite=False).update(is_favorite=True)
 
-    return redirect('estatelist/')
+
+    return redirect('estatelist')
 
 

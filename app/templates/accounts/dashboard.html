@@ -50,6 +50,7 @@
     <section class="apartments">
         <div class="container">
             <div class="row">
+                {% include 'partials/_alerts.html' %}
                 <div class="col-12 space"></div>
                 {% if apartments %}
                 {% for apartment in apartments %}

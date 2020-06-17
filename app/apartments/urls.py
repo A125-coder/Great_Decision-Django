@@ -8,5 +8,4 @@ urlpatterns = [
     path('search', views.search, name="search"),
     path('favorite', views.favorite, name="favorite"),
 
-
 ]

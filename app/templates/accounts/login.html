@@ -5,6 +5,7 @@
     <h1 class='h1_boble'>LogIn</h1>
     <div class="main-agileinfo">
         <div class="agileits-top">
+            {% include 'partials/_alerts.html' %}
             <form action="{% url 'login' %}" method="POST">
                 {% csrf_token %}
                 <input class="text input_boble" type="text" name="username" placeholder="Username" required="">
