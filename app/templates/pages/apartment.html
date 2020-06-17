@@ -58,6 +58,13 @@
                 <p class="price"><span class="name-big">Вартість</span> <span class="title-big">{{ apartment.price }}
                         тис.дол</span></p>
             </div>
+            {% if user.is_authenticated %}
+            <form action="{% url 'favorite' %}" method="POST">
+                {% csrf_token  %}
+                <input class="button-more" type="submit" value="Зберегти в обране" name="favorite"/>
+                <input type="hidden" name="apartment_id" value="{{ apartment.id }}"/>
+            </form>
+            {% endif %}
 
         </div>
         <div class="col-7 realtor">

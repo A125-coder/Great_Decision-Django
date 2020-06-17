@@ -1,17 +1,45 @@
 {% extends 'base.html' %}
-{% load static %}
+
 {% block content %}
+
 <section class="apartments">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p class="text-title upper">
-                    Вибір власного житла- це один з найважливіших рішень у житті людини. Це не дивно, адже від вибору
-                    житла залежатиме комфорт і затишок проживання в певному середовищі кожної людини.<br>Саме тому перед
-                    придбанням нової квартири, потрібно обов'язково ретельно підійти до цього питання, щоб не помилитися
-                    і зробити максимально правильний вибір квартири для свого подальшого життя.
-                </p>
+                <h2>Зробіть <span>Вибір</span></h2>
+                <form action="{% url 'search' %}" class="dropdown">
+                    <label for="city" id="town">Місто</label>
+                        <input type="text" name="city" placeholder="City" /> 
+                        <label id="type">Тип житла</label>              
+                    <select id="house_type">
+                        <option value="Тип житла"></option>
+                        <option value="one_ap">Однокімнатна квартира</option>
+                        <option value="two_ap">Двокімнатна квартира</option>
+                        <option value="three_ap">Трикімнатна квартира</option>
+                        <option value="one">Одноповерхові будинки</option>
+                        <option value="two">Двоповерхові будинки</option>
+                        <option value="three">Мансардні будинки</option>
+                    </select>
+                    <label id="square">Площа</label>
+                    <select id="square_meter">
+                        <option value="Площа"></option>
+                        <option value="one">&#60; 30 м&#178;</option>
+                        <option value="two">30 - 60 м&#178;</option>
+                        <option value="three">&#62; 60 м&#178;</option>
+                    </select>
+                    <label id="prices">Вартість</label>
+                    <select id="value">
+                        <option value="value"></option>
+                        <option value="one">&#60; 300 тис. дол.</option>
+                        <option value="two">300 - 600 тис. дол.</option>
+                        <option value="three">&#62; 600 тис. дол.</option>
+                    </select>
+                    <div class="offset-1 search-buttons">
+                        <button class="button-show">Показати все >></button>
+                        <button class="offset-1 button-ahead">Вперед >></button>
+                    </form>
             </div>
+            
             {% if apartments %}
             {% for apartment in apartments %}
             <div class="col-lg-6 col-sm-12 pic">
@@ -34,9 +62,6 @@
                 <div class="btn"><a
                             href="{% url 'apartment' apartment.id  %}" class="button-more">Більше>></a>
                 </div>
-                
-                
-                
             </div>
             {% endfor %}
 

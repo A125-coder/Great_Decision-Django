@@ -29,6 +29,7 @@ class Apartments(models.Model):
     photo_5 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     photo_6 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     photo_7 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    is_favorite = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title

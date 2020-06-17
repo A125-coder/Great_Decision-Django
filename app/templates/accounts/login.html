@@ -5,9 +5,9 @@
     <h1 class='h1_boble'>LogIn</h1>
     <div class="main-agileinfo">
         <div class="agileits-top">
-            <form action="{% url 'register' %}" method="GET">
+            <form action="{% url 'login' %}" method="POST">
                 {% csrf_token %}
-                <input class="text input_boble" type="text" name="Username" placeholder="Username" required="">
+                <input class="text input_boble" type="text" name="username" placeholder="Username" required="">
                 <input class="text input_boble" type="password" name="password" placeholder="Password" required="">
                 <input type="submit" value="LogIn">
             </form>

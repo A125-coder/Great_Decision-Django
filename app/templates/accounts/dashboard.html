@@ -1,5 +1,117 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h2>Dashboard</h2>
+<html>
+
+<head>
+
+</head>
+
+
+<body>
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a {% if "estatelist/" == request.path  %} class="active" {% endif %} href="{% url 'search' %}">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Знайти квартири
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a {% if "estatelist/" == request.path  %} class="active" {% endif %} href="{% url 'estatelist' %}">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        Всі квартири
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+
+        <ul class="logout">
+            <li>
+                <a href="javascript:{document.getElementById('logout').submit()}">
+                    <i class="fa fa-power-off fa-2x"></i>
+                    <span class="nav-text">
+                        Logout
+                    </span>
+                </a>
+                <form action="{% url 'logout' %}" id='logout' method="POST">
+                    {% csrf_token  %}
+                    <input type="hidden" />
+                </form>
+            </li>
+        </ul>
+    </nav>
+    <section class="apartments">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 space"></div>
+                {% if apartments %}
+                {% for apartment in apartments %}
+                <div class="col-lg-6 col-sm-12 pic">
+                    <div class="border1_1"></div>
+                    <img class="ap1" src="{{ apartment.photo_0.url }}" />
+                </div>
+                <div class="offset-lg-1 col-lg-5 col-sm-12 info">
+                    <h5>{{ apartment.title }}</h5>
+                    <div class="flat--bcg ">
+                        <div>
+                            <p><span class="title">Місто:</span><span class="name">{{ apartment.city }}</span></p>
+                            <p><span class="title">Площа:</span><span
+                                    class="name">{{ apartment.square_all }}м<sup>2</sup></span></p>
+                        </div>
+                        <div>
+                            <p><span class="title">Тип житла:</span><span
+                                    class="name">{{ apartment.apartment_type }}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btn"><a href="{% url 'apartment' apartment.id  %}" class="button-more">Більше>></a>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+                {% else  %}
+                <div class="col">Немає збереженого</div>
+                {% endif %}
+            </div>
+            <div class="col-12 space"></div>
+
+            <div class="pagination">
+                <span class="step-links">
+                    <nav aria-label="Page navigation example ">
+                        <ul class="pagination">
+                            {% if apartments.has_previous %}
+                            <li class="page-item"><a href="?page=1" class="page-link">&laquo; first</a></li>
+                            <li class="page-item"><a href="?page={{ apartments.previous_page_number }}"
+                                    class="page-link">previous</a></li>
+                            {% endif %}
+
+                            <span class="current">
+                                Page {{ apartments.number }} of {{ apartments.paginator.num_pages }}.
+                            </span>
+
+                            {% if apartments.has_next %}
+                            <li class="page-item"><a href="?page={{ apartments.next_page_number }}"
+                                    class="page-link">next</a></li>
+                            <li class="page-item"><a href="?page={{ apartments.paginator.num_pages }}"
+                                    class="page-link">last &raquo;</a></li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                </span>
+            </div>
+        </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
 {% endblock %}

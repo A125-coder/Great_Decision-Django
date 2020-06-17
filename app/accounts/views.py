@@ -1,75 +1,80 @@
 from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.contrib.auth.models import User
-
-# Create your views here.
+from apartments.models import Apartments
+from django.core.paginator import Paginator
 
 
 def login(request):
-    # if request.method == 'GET':
-    #     user_name = request.GET.username
-    #     password = request.GET.password
+    if request.method == 'POST':
+        user_name = request.POST['username']
+        password = request.POST['password']
 
-    #     if User.objects.filter(username!=user_name).exists():
-    #         print("User doesn't exist. Please register")
-    #         return redirect('register')
+        user = auth.authenticate(username=user_name, password=password)
 
-    #         if User.objects.filter(password!=password).exists():
-    #             return redirect('register')
-            
-    #         else:
-    #             return redirect('index')
-    #     else:
-    #         return redirect('index')
-
-    data = {"header_h1": "Увійти в кабінет",
-            "header_p": "<a href='index.html'>Головна</a> >> Увійти в кабінет"}
-
-    return render(request, "accounts/login.html",context=data)
+        if user is not None:
+            auth.login(request, user)
+            print("User logged!")
+            return redirect("dashboard")
+        else:
+            print("Invalid login or password")
+            return redirect('login')
+    else:
+        return render(request, 'accounts/login.html')
 
 
 def register(request):
     if request.method == 'POST':
         first_name = request.POST['Name']
         last_name = request.POST['Surname']
-        user_name = request.POST['Username']
+        username = request.POST['Username']
         email = request.POST['email']
         password = request.POST['password']
         confirm_password = request.POST['confirm-password']
 
         if password == confirm_password:
-            if User.objects.filter(username=user_name).exists():
+            if User.objects.filter(username=username).exists():
                 print("User exists")
                 return redirect('register')
-
             else:
                 if User.objects.filter(email=email).exists():
                     print("Email exists")
                     return redirect('register')
                 else:
                     user = User.objects.create_user(
-                        username=user_name,
+                        username=username,
                         password=password,
                         email=email,
                         first_name=first_name,
                         last_name=last_name
                     )
                     user.save()
-                    print("You are registered. Please Login.")
+                    print("You are now registred. Please log in")
                     return redirect('login')
         else:
-            print("Password don't match")
+            print("Passwords do not match")
             return redirect('register')
-
-    data = {"header_h1": "Реєстрація",
-            "header_p": "<a href='index.html'>Головна</a> >> Реєстрація"}
-
-    return render(request, "accounts/register.html", context=data)
+    return render(request, 'accounts/register.html')
 
 
 def logout(request):
-    return render(request, "accounts/logout.html")
+    if request.method == "POST":
+        auth.logout(request)
+        print("logged out")
+    return redirect('index')
 
 
 def dashboard(request):
-    return render(request, "accounts/dashboard.html")
+    apartments = Apartments.objects.order_by(
+        "-list_date").filter(is_favorite=True, is_published=True)
+
+    paginator = Paginator(apartments, 2)
+    page = request.GET.get('page')
+    pagged_apartments = paginator.get_page(page)
+    context = {
+        "apartments": pagged_apartments,
+        "header_h1": "Dashboard",
+        "header_p": "Головна >> Dashboard",
+    }
+    return render(request, 'accounts/dashboard.html', context)
+
